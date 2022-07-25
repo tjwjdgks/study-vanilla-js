@@ -1,8 +1,9 @@
-const hello = document.querySelector('.hello h1');
-console.log(hello);
-function handleTitleClick(){
-    const clickedClass = "active";
-    this.classList.toggle(clickedClass);
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+
+function onLoginSubmit(event){
+    event.preventDefault();
+    console.log(loginInput.value);
 }
 
-hello.addEventListener('click',handleTitleClick);
+loginForm.addEventListener("submit",onLoginSubmit)
